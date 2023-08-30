@@ -1,0 +1,6 @@
+0 0 0 0 0 -1 Inf number of roots test
+1 1 1 0 0 0 Zero roots test
+0 4 -8 2 0 1 Linear test
+1 -2 1 1 1 1 Square test 1
+1 0 -4 -2 2 2 Square test 2
+1 5 6 -3 -2 2 Square test 3
