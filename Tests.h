@@ -6,8 +6,8 @@
 /// Maximum length of the test name
 const int TEST_NAME_LEN = 30;
 
-/// Number of program tests
-const int NUMBER_OF_TESTS = 6;
+//const char *DEFAULT_TEST_FILE = "Testsdata.txt";
+
 
 /**
  * Stores the reference values for the test
@@ -31,6 +31,6 @@ int single_test (TestData *data);
 /**
  * Does several tests of the program
 */
-void all_tests();
+void all_tests(const char *test_file);
 
 #endif // TESTS_H_INCLUDED

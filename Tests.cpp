@@ -29,14 +29,16 @@ int single_test (TestData *data) {
     }
 }
 
-void all_tests() {
+void all_tests(const char *test_file) {
     printf("Doing several tests...\n");
-    FILE *datafile = fopen("Testsdata.txt", "r");
+    // const file name
+    // const char *DEFAULT_TEST_FILE = "Testsdata.txt"
+    FILE *datafile = fopen(test_file, "r");
     if (datafile == NULL) {
-        printf("There's no fie with data for tests");
+        printf("There's no file with data for tests");
     }
     else {
-        for (int i = 0; i < NUMBER_OF_TESTS; i++) {
+        while (getc(datafile) != EOF) {
             TestData data1 = {{0, 0, 0, 0, 0}, 0, "ABC"};
             fscanf(datafile, "%lg %lg %lg %lg %lg %lg", &data1.equat.a, &data1.equat.b,
             &data1.equat.c, &data1.equat.x1, &data1.equat.x2, &data1.nRoots);

@@ -8,7 +8,6 @@ void clear_line() {
 }
 
 
-
 void read_coeff(double *n) {
     while (scanf("%lg", n) != 1) {
             clear_line();

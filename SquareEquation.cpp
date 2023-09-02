@@ -7,16 +7,26 @@
 
 #define TestMode
 
-int main() {
+const char *DEFAULT_TEST_FILE = "Testsdata.txt";
+
+// command line arguments in c
+
+int main(int argc, const char *argv[]) {
     printf("# Square equations solver\n"
            "# (ñ)Marina Kuchina, 2023\n\n");
 
+    // argv[1] -> tests.txt
     // func
     // FILE *
     // file tests
 
     #ifdef TestMode
-        all_tests();
+        if (argc == 1) {
+            all_tests(DEFAULT_TEST_FILE);
+        }
+        else {
+            all_tests(argv[1]);
+        }
     #endif
 
     SquareEquation equation = {0, 0, 0, 0, 0};
